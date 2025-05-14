@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "docker" {
-  host = "/run/user/0/podman/podman.sock"
+  host = "unix:///run/user/0/podman/podman.sock"
 }
 
 resource "docker_image" "nginx" {
